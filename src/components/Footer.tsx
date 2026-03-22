@@ -87,9 +87,15 @@ export default function Footer() {
           <p className="text-white/50 text-sm">
             &copy; {new Date().getFullYear()} FloraTrace. All rights reserved.
           </p>
-          <p className="text-white/50 text-sm">
-            info@floratrace.com
-          </p>
+          <div className="flex items-center gap-6">
+            <Link href="/privacy" className="text-white/50 hover:text-green-light transition-colors text-sm">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="text-white/50 hover:text-green-light transition-colors text-sm">
+              Terms of Service
+            </Link>
+            <span className="text-white/50 text-sm">info@floratrace.com</span>
+          </div>
         </div>
       </div>
     </footer>
