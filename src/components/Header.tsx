@@ -9,7 +9,14 @@ import CTAButton from "./CTAButton";
 
 const navItems = [
   { label: "Our Science", href: "/our-science" },
-  { label: "Advisor", href: "/advisor" },
+  {
+    label: "Solutions",
+    href: "/advisor",
+    children: [
+      { label: "Trade Advisory", href: "/advisor" },
+      { label: "UFLPA Compliance", href: "/uflpa-compliance" },
+    ],
+  },
   { label: "Industries", href: "/industries" },
   { label: "Platform", href: "/platform" },
   {
@@ -18,7 +25,6 @@ const navItems = [
     children: [
       { label: "About Us", href: "/about" },
       { label: "News", href: "/news" },
-      { label: "UFLPA Compliance", href: "/uflpa-compliance" },
     ],
   },
   { label: "Contact", href: "/contact" },
@@ -27,7 +33,7 @@ const navItems = [
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -38,7 +44,7 @@ export default function Header() {
 
   useEffect(() => {
     setMobileOpen(false);
-    setDropdownOpen(false);
+    setOpenDropdown(null);
   }, [pathname]);
 
   return (
@@ -59,8 +65,8 @@ export default function Header() {
               item.children ? (
                 <div key={item.label} className="relative">
                   <button
-                    onClick={() => setDropdownOpen(!dropdownOpen)}
-                    onMouseEnter={() => setDropdownOpen(true)}
+                    onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
+                    onMouseEnter={() => setOpenDropdown(item.label)}
                     className={`flex items-center gap-1 text-sm font-medium uppercase tracking-wide transition-colors cursor-pointer ${
                       item.children.some((c) => pathname === c.href)
                         ? "text-green"
@@ -70,10 +76,10 @@ export default function Header() {
                     {item.label}
                     <ChevronDown className="w-4 h-4" />
                   </button>
-                  {dropdownOpen && (
+                  {openDropdown === item.label && (
                     <div
                       className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-100 py-2"
-                      onMouseLeave={() => setDropdownOpen(false)}
+                      onMouseLeave={() => setOpenDropdown(null)}
                     >
                       {item.children.map((child) => (
                         <Link
@@ -154,17 +160,17 @@ export default function Header() {
               item.children ? (
                 <div key={item.label}>
                   <button
-                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                    onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
                     className="w-full flex items-center justify-between py-3 px-4 text-navy font-medium uppercase tracking-wide text-sm cursor-pointer"
                   >
                     {item.label}
                     <ChevronDown
                       className={`w-4 h-4 transition-transform ${
-                        dropdownOpen ? "rotate-180" : ""
+                        openDropdown === item.label ? "rotate-180" : ""
                       }`}
                     />
                   </button>
-                  {dropdownOpen && (
+                  {openDropdown === item.label && (
                     <div className="pl-8 space-y-1">
                       {item.children.map((child) => (
                         <Link

@@ -14,10 +14,10 @@ const footerLinks = [
   {
     title: "Solutions",
     links: [
-      { label: "Client Portal", href: "/platform" },
+      { label: "Trade Advisory", href: "/advisor" },
       { label: "UFLPA Compliance", href: "/uflpa-compliance" },
+      { label: "Client Portal", href: "/platform" },
       { label: "Industries", href: "/industries" },
-      { label: "Advisor", href: "/advisor" },
     ],
   },
 ];
