@@ -42,7 +42,7 @@ const leadership = [
   {
     name: "Terje Gloerstad",
     title: "Chief Executive Officer & Founder",
-    image: null as string | null,
+    image: "/images/team/terje-gloerstad.png",
     linkedin: "https://www.linkedin.com/in/terjeg/",
     bio: "Terje founded FloraTrace in 2020 to bring forensic science and data analytics to supply chain transparency. With an Executive MBA from London Business School and deep international business experience, he leads the company's strategic vision and growth.",
     credentials: ["Executive MBA, London Business School"],
@@ -50,7 +50,7 @@ const leadership = [
   {
     name: "Kimberley Gunther",
     title: "Co-Founder & Chief Strategist",
-    image: null as string | null,
+    image: "/images/team/kimberley-gunther.png",
     linkedin: "https://www.linkedin.com/in/kimberleygunther/",
     bio: "Kim co-founded FloraTrace and leads the company's strategic partnerships and customer solutions. She architected the KYG Trade integration that links origin verification to digital supply chain traceability, creating immutable audit records for regulatory compliance.",
     credentials: [],
@@ -58,7 +58,7 @@ const leadership = [
   {
     name: "Dr. Brett Tipple",
     title: "President & Chief Scientist",
-    image: null as string | null,
+    image: "/images/team/brett-tipple.png",
     linkedin: "https://www.linkedin.com/in/bretttipple/",
     bio: "Brett is a leading isotope geochemist with a PhD from Yale and 22+ years of experience in forensic geochemistry. He has authored 80+ peer-reviewed publications and serves as Adjunct Assistant Professor at the University of Utah. His research in isotope-based origin verification is the scientific backbone of FloraTrace.",
     credentials: ["PhD, Geology — Yale University", "80+ peer-reviewed publications", "Adjunct Assistant Professor, University of Utah"],
@@ -69,21 +69,21 @@ const advisors = [
   {
     name: "Brenda Brockman-Smith",
     title: "Trade & Compliance Advisor",
-    image: null as string | null,
+    image: "/images/team/brenda-brockman-smith.png",
     linkedin: "https://www.linkedin.com/in/brendabrockmansmith/",
     bio: "Former Executive Assistant Commissioner for International Trade at U.S. Customs and Border Protection, where she oversaw a $260M annual budget and led enforcement of trade laws on $4 trillion of annual trade. Recipient of a Presidential Rank Award as a Distinguished Executive in the top 1% of senior government executives. Licensed Customs Broker.",
   },
   {
     name: "Monica Jonas",
     title: "Operations & Strategy Advisor",
-    image: null as string | null,
+    image: "/images/team/monica-jonas.png",
     linkedin: "https://www.linkedin.com/in/monicajonas/",
     bio: "Former COO, Deputy CEO, and Interim Co-CEO at Oritain, the global leader in forensic origin verification, where she led 250+ employees across five countries and scaled the business to $40M+ ACV. Previously COO at WorkFusion and SVP of Global Business Operations at Viacom Media Networks. MS from Johns Hopkins.",
   },
   {
     name: "Greg Adams",
     title: "Commercial Strategy Advisor",
-    image: null as string | null,
+    image: "/images/team/greg-adams.png",
     linkedin: "https://www.linkedin.com/in/gregadams1815/",
     bio: "Former VP of Sales for the Americas and Global Channels at Oritain, where he rebuilt the Americas sales team and improved business performance tracking. 29+ years of experience in enterprise go-to-market strategy. Wharton Executive Education. U.S. Army Veteran.",
   },
@@ -97,14 +97,14 @@ const advisors = [
   {
     name: "Carli Rosencranz",
     title: "Brands & Sourcing Advisor",
-    image: null as string | null,
+    image: "/images/team/carli-rosencranz.png",
     linkedin: "https://www.linkedin.com/in/carlirosencranz/",
     bio: "25+ years in retail and CPG with deep expertise in global sourcing, private brands, and merchandising strategy. Former Senior Director of Global Sourcing at Walmart, where she led sourcing strategy for packaged foods and hot beverages. MS in Marketing from UT Arlington.",
   },
   {
     name: "Rob Fishman",
     title: "Insurance & Risk Advisor",
-    image: null as string | null,
+    image: "/images/team/rob-fishman.png",
     linkedin: "https://www.linkedin.com/in/robfishman/",
     bio: "39+ years as a C-suite executive in insurance and risk management, including leadership roles at Zurich, Progressive, ARAG, and HCC Insurance. At FloraTrace, he develops risk transfer and insurance solutions for companies facing forced labor compliance exposure. JD from University of Toledo. CPCU certified.",
   },
