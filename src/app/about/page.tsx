@@ -269,55 +269,55 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {advisors.map((person, i) => (
               <AnimatedSection key={person.name} delay={i * 0.05}>
-                <div className="bg-white rounded-2xl border border-gray-medium/50 p-6 hover:shadow-xl transition-all duration-300 group h-full flex flex-col">
-                  <div className="flex items-start gap-4 mb-4">
+                <div className="bg-white rounded-2xl border border-gray-medium/50 overflow-hidden hover:shadow-xl transition-all duration-300 group h-full flex flex-col">
+                  <div className="bg-gradient-to-br from-navy/5 to-gray-light p-8 text-center">
                     {person.image ? (
-                      <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-medium/50">
+                      <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-3 border-white shadow-md">
                         <Image
                           src={person.image}
                           alt={person.name}
-                          width={56}
-                          height={56}
+                          width={96}
+                          height={96}
                           className="w-full h-full object-cover"
                         />
                       </div>
                     ) : (
-                      <div className="w-14 h-14 rounded-full bg-navy/5 border border-navy/10 flex items-center justify-center flex-shrink-0 group-hover:bg-green/10 group-hover:border-green/20 transition-colors">
-                        <span className="text-sm font-bold text-navy group-hover:text-green transition-colors">
+                      <div className="w-24 h-24 rounded-full bg-navy/10 border-3 border-white shadow-md flex items-center justify-center mx-auto mb-4">
+                        <span className="text-2xl font-bold text-navy">
                           {person.name.split(" ").map(n => n[0]).join("")}
                         </span>
                       </div>
                     )}
-                    <div>
-                      <h3 className="text-lg font-bold text-navy">
-                        {person.name}
-                      </h3>
-                      <p className="text-green text-xs font-semibold uppercase tracking-wide">
-                        {person.title}
-                      </p>
-                    </div>
+                    <h3 className="text-lg font-bold text-navy">
+                      {person.name}
+                    </h3>
+                    <p className="text-green text-xs font-semibold uppercase tracking-wide mt-1">
+                      {person.title}
+                    </p>
                   </div>
-                  <p className="text-gray-dark text-sm leading-relaxed flex-1">
-                    {person.bio}
-                  </p>
-                  <div className="mt-4 pt-4 border-t border-gray-100">
-                    <a
-                      href={person.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-navy hover:text-green transition-colors text-sm font-medium"
-                    >
-                      {person.linkedin.includes("linkedin.com") ? (
-                        <Linkedin className="w-4 h-4" />
-                      ) : (
-                        <Briefcase className="w-4 h-4" />
-                      )}
-                      {person.linkedin.includes("linkedin.com") ? "LinkedIn" : "Faculty Profile"}
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
+                  <div className="p-6 flex-1 flex flex-col">
+                    <p className="text-gray-dark text-sm leading-relaxed flex-1">
+                      {person.bio}
+                    </p>
+                    <div className="mt-4 pt-4 border-t border-gray-100">
+                      <a
+                        href={person.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-navy hover:text-green transition-colors text-sm font-medium"
+                      >
+                        {person.linkedin.includes("linkedin.com") ? (
+                          <Linkedin className="w-4 h-4" />
+                        ) : (
+                          <Briefcase className="w-4 h-4" />
+                        )}
+                        {person.linkedin.includes("linkedin.com") ? "LinkedIn" : "Faculty Profile"}
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </AnimatedSection>
