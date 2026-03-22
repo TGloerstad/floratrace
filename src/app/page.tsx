@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   FlaskConical,
   ShieldCheck,
@@ -16,6 +17,14 @@ import {
   Calendar,
   Palette,
   ArrowRight,
+  ClipboardList,
+  Microscope,
+  Fingerprint,
+  FileCheck,
+  FileX2,
+  ScanSearch,
+  Monitor,
+  Quote,
 } from "lucide-react";
 import CTAButton from "@/components/CTAButton";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -71,18 +80,30 @@ const industries = [
   },
 ];
 
-const analysisPoints = [
+const processSteps = [
   {
-    icon: <MapPin className="w-5 h-5" />,
-    text: "Origin mapping - Isoscape Technology provides more accurate risk assessment",
+    icon: <ClipboardList className="w-7 h-7" />,
+    step: "01",
+    title: "Sample Collection",
+    description: "Client or third-party collects samples from products, raw materials, or supply chain checkpoints.",
   },
   {
-    icon: <FlaskConical className="w-5 h-5" />,
-    text: "Mixing models for complex blends",
+    icon: <Microscope className="w-7 h-7" />,
+    step: "02",
+    title: "Chemical Analysis",
+    description: "ICP-MS and MC-ICP-MS elemental and isotopic analysis in our accredited laboratories.",
   },
   {
-    icon: <Award className="w-5 h-5" />,
-    text: "FloraTrace meets Daubert Standard and evidence stands up in court",
+    icon: <Fingerprint className="w-7 h-7" />,
+    step: "03",
+    title: "Origin Fingerprint",
+    description: "ML-driven origin prediction using proprietary algorithms and authenticated reference databases.",
+  },
+  {
+    icon: <FileCheck className="w-7 h-7" />,
+    step: "04",
+    title: "Verified Report",
+    description: "Court-ready verified report with confidence scores, delivered via our secure client portal.",
   },
 ];
 
@@ -91,6 +112,24 @@ const stats = [
   { value: "US-Based", label: "Domestic Labs", icon: <Building2 className="w-6 h-6" /> },
   { value: "Court-Ready", label: "Daubert Standard", icon: <Scale className="w-6 h-6" /> },
   { value: "Global", label: "Lab Network", icon: <Globe className="w-6 h-6" /> },
+];
+
+const whyForensic = [
+  {
+    icon: <FileX2 className="w-6 h-6" />,
+    problem: "Paper trails can be falsified",
+    solution: "We test the product itself -- isotopic signatures cannot be forged or altered.",
+  },
+  {
+    icon: <ScanSearch className="w-6 h-6" />,
+    problem: "Labels only track packaging",
+    solution: "Our analysis verifies the actual raw material, not the label or documentation.",
+  },
+  {
+    icon: <Scale className="w-6 h-6" />,
+    problem: "Audits can't detect blending",
+    solution: "Our mixing models identify commingled materials from multiple geographic origins.",
+  },
 ];
 
 export default function HomePage() {
@@ -131,9 +170,12 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
-                className="mt-10"
+                className="mt-10 flex flex-wrap gap-4"
               >
                 <CTAButton>Request a Call</CTAButton>
+                <CTAButton href="/uflpa-compliance" variant="outline">
+                  UFLPA Compliance
+                </CTAButton>
               </motion.div>
             </div>
 
@@ -163,14 +205,123 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Decorative dots */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex gap-1.5">
           {Array.from({ length: 8 }).map((_, i) => (
-            <div
-              key={i}
-              className="w-1.5 h-1.5 rounded-full bg-green/30"
-            />
+            <div key={i} className="w-1.5 h-1.5 rounded-full bg-green/30" />
           ))}
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="How It Works"
+            title="From Sample to Verified Origin"
+            subtitle="A clear, science-based process with results delivered in approximately 14 days."
+          />
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, i) => (
+              <AnimatedSection key={step.step} delay={i * 0.1}>
+                <div className="relative h-full">
+                  <div className="bg-white rounded-2xl border border-gray-medium/50 p-8 hover:shadow-xl transition-all duration-300 h-full group">
+                    <span className="text-5xl font-bold text-green/10 absolute top-4 right-6 group-hover:text-green/20 transition-colors">
+                      {step.step}
+                    </span>
+                    <div className="w-14 h-14 rounded-xl bg-green/10 flex items-center justify-center mb-6 text-green group-hover:bg-green group-hover:text-white transition-colors duration-300">
+                      {step.icon}
+                    </div>
+                    <h3 className="text-lg font-bold text-navy mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-dark text-sm leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                  {i < processSteps.length - 1 && (
+                    <div className="hidden lg:block absolute top-1/2 -right-4 z-10">
+                      <ArrowRight className="w-5 h-5 text-green/30" />
+                    </div>
+                  )}
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Forensic Science > Paper Trails */}
+      <section className="py-20 md:py-28 bg-gray-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <AnimatedSection direction="left">
+              <p className="text-green font-semibold uppercase tracking-widest text-sm mb-3">
+                Why Forensic Science
+              </p>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-navy leading-tight mb-4">
+                Paper Trails Can Be Falsified. Products Can&apos;t Lie.
+              </h2>
+              <p className="text-gray-dark leading-relaxed mb-8">
+                Traditional traceability relies on documentation, audits, and
+                supplier declarations -- all of which can be manipulated.
+                FloraTrace tests the product itself using forensic isotopic
+                analysis, providing objective, court-admissible evidence of
+                geographic origin.
+              </p>
+              <div className="space-y-6">
+                {whyForensic.map((item, i) => (
+                  <div key={i} className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-orange/10 flex items-center justify-center text-orange flex-shrink-0 mt-0.5">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <p className="text-navy font-semibold text-sm mb-0.5">
+                        {item.problem}
+                      </p>
+                      <p className="text-gray-dark text-sm leading-relaxed">
+                        {item.solution}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection direction="right">
+              <div className="bg-white rounded-2xl border border-gray-medium/50 p-8 md:p-10">
+                <div className="grid grid-cols-2 gap-6 mb-8">
+                  <div className="text-center p-4 rounded-xl bg-red-50">
+                    <FileX2 className="w-8 h-8 text-red-400 mx-auto mb-2" />
+                    <p className="text-xs font-semibold text-red-600 uppercase tracking-wide">Paper Trails</p>
+                    <p className="text-xs text-red-400 mt-1">Vulnerable to fraud</p>
+                  </div>
+                  <div className="text-center p-4 rounded-xl bg-green/5">
+                    <FlaskConical className="w-8 h-8 text-green mx-auto mb-2" />
+                    <p className="text-xs font-semibold text-green uppercase tracking-wide">Forensic Science</p>
+                    <p className="text-xs text-green/70 mt-1">Tests the product itself</p>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  {[
+                    { label: "Tamper-resistant", paper: false, science: true },
+                    { label: "Court-admissible", paper: false, science: true },
+                    { label: "Detects blending", paper: false, science: true },
+                    { label: "Independent of supplier claims", paper: false, science: true },
+                    { label: "Verifies raw material origin", paper: false, science: true },
+                  ].map((row) => (
+                    <div key={row.label} className="flex items-center justify-between py-2 border-b border-gray-100 last:border-0">
+                      <span className="text-sm text-navy">{row.label}</span>
+                      <div className="flex gap-10">
+                        <span className="text-red-400 text-lg">&#x2717;</span>
+                        <span className="text-green text-lg">&#x2713;</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
@@ -246,27 +397,19 @@ export default function HomePage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/10">
                   <p className="text-4xl font-bold text-orange mb-1">100%</p>
-                  <p className="text-white/60 text-xs leading-tight">
-                    predicted Chinese origin
-                  </p>
+                  <p className="text-white/60 text-xs leading-tight">predicted Chinese origin</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/10">
                   <p className="text-4xl font-bold text-green-light mb-1">61%</p>
-                  <p className="text-white/60 text-xs leading-tight">
-                    flagged Xinjiang (XUAR)
-                  </p>
+                  <p className="text-white/60 text-xs leading-tight">flagged Xinjiang (XUAR)</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/10">
                   <p className="text-4xl font-bold text-white mb-1">70%</p>
-                  <p className="text-white/60 text-xs leading-tight">
-                    of world&apos;s paprika from XUAR
-                  </p>
+                  <p className="text-white/60 text-xs leading-tight">of world&apos;s paprika from XUAR</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/10">
                   <p className="text-4xl font-bold text-white mb-1">~14</p>
-                  <p className="text-white/60 text-xs leading-tight">
-                    day turnaround for origin verification
-                  </p>
+                  <p className="text-white/60 text-xs leading-tight">day turnaround for origin verification</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -296,12 +439,8 @@ export default function HomePage() {
                   }`}>
                     {industry.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-navy mb-2">
-                    {industry.name}
-                  </h3>
-                  <p className="text-gray-dark text-sm leading-relaxed">
-                    {industry.description}
-                  </p>
+                  <h3 className="text-lg font-bold text-navy mb-2">{industry.name}</h3>
+                  <p className="text-gray-dark text-sm leading-relaxed">{industry.description}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -319,46 +458,109 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Cutting Edge Analysis */}
+      {/* Client Portal Preview */}
       <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection direction="left">
-              <p className="text-green font-semibold uppercase tracking-widest text-sm mb-3">
-                Our Technology
-              </p>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-navy leading-tight mb-8">
-                Cutting Edge Analysis Sets FloraTrace Apart
+              <div className="flex items-center gap-2 mb-4">
+                <Monitor className="w-5 h-5 text-green" />
+                <p className="text-green font-semibold uppercase tracking-widest text-sm">
+                  Technology Platform
+                </p>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-navy leading-tight mb-6">
+                Your Supply Chain, Verified in Real Time
               </h2>
-              <div className="space-y-6">
-                {analysisPoints.map((point, i) => (
-                  <div key={i} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-orange/10 flex items-center justify-center text-orange flex-shrink-0 mt-0.5">
-                      {point.icon}
+              <p className="text-gray-dark leading-relaxed mb-6">
+                The FloraTrace Portal gives you a complete view of your
+                verification program -- from specimen tracking and origin
+                predictions to supplier risk and compliance reporting.
+              </p>
+              <div className="space-y-4 mb-8">
+                {[
+                  "Dashboard with KPIs: specimens, reports, suppliers, alerts",
+                  "Interactive origin maps and distribution charts",
+                  "AI-powered insights and risk flagging",
+                  "Exportable reports for CBP and compliance teams",
+                ].map((feature) => (
+                  <div key={feature} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-green/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-2 h-2 rounded-full bg-green" />
                     </div>
-                    <p className="text-gray-dark leading-relaxed">
-                      {point.text}
-                    </p>
+                    <p className="text-gray-dark text-sm">{feature}</p>
                   </div>
                 ))}
               </div>
+              <CTAButton href="/platform">
+                <span className="flex items-center gap-2">
+                  Explore the Platform <ArrowRight className="w-4 h-4" />
+                </span>
+              </CTAButton>
             </AnimatedSection>
 
             <AnimatedSection direction="right">
               <div className="relative">
-                <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-green/10 via-white to-navy/5 aspect-[4/3] flex items-center justify-center border border-gray-medium/30">
-                  <div className="text-center p-8">
-                    <Globe className="w-24 h-24 text-green/30 mx-auto mb-4" />
-                    <p className="text-navy/50 font-medium">
-                      Global Origin Mapping
-                    </p>
-                    <p className="text-sm text-gray-dark mt-1">
-                      Isoscape Technology
-                    </p>
-                  </div>
+                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-medium/30">
+                  <Image
+                    src="/images/portal-dashboard.png"
+                    alt="FloraTrace Portal Dashboard"
+                    width={800}
+                    height={500}
+                    className="w-full h-auto"
+                  />
                 </div>
-                <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl bg-orange/10 -z-10" />
-                <div className="absolute -top-4 -left-4 w-24 h-24 rounded-2xl bg-green/10 -z-10" />
+                <div className="absolute -bottom-6 -left-6 w-48 rounded-xl overflow-hidden shadow-xl border border-gray-medium/30 hidden md:block">
+                  <Image
+                    src="/images/portal-analytics.png"
+                    alt="FloraTrace Analytics Dashboard"
+                    width={300}
+                    height={200}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials / Trust */}
+      <section className="py-20 md:py-28 bg-gray-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Trusted By Industry"
+            title="What Our Clients Say"
+          />
+          <div className="grid md:grid-cols-2 gap-8">
+            <AnimatedSection delay={0}>
+              <div className="bg-white rounded-2xl p-8 md:p-10 border border-gray-medium/50 h-full">
+                <Quote className="w-8 h-8 text-green/20 mb-4" />
+                <p className="text-gray-dark leading-relaxed italic mb-6">
+                  &ldquo;FloraTrace&apos;s forensic origin verification has become an
+                  essential part of our supply chain due diligence. Their
+                  science-based approach gives us the confidence to stand behind
+                  our sourcing claims.&rdquo;
+                </p>
+                <div className="border-t border-gray-100 pt-4">
+                  <p className="font-bold text-navy">Supply Chain Director</p>
+                  <p className="text-gray-dark text-sm">Major U.S. Retailer</p>
+                </div>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={0.1}>
+              <div className="bg-white rounded-2xl p-8 md:p-10 border border-gray-medium/50 h-full">
+                <Quote className="w-8 h-8 text-green/20 mb-4" />
+                <p className="text-gray-dark leading-relaxed italic mb-6">
+                  &ldquo;When we needed to verify the geographic origin of our
+                  raw materials for UFLPA compliance, FloraTrace delivered
+                  fast, reliable results that our compliance team could present
+                  with confidence.&rdquo;
+                </p>
+                <div className="border-t border-gray-100 pt-4">
+                  <p className="font-bold text-navy">VP of Compliance</p>
+                  <p className="text-gray-dark text-sm">Consumer Packaged Goods Company</p>
+                </div>
               </div>
             </AnimatedSection>
           </div>
@@ -375,9 +577,7 @@ export default function HomePage() {
                   <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mx-auto mb-4 text-green-light">
                     {stat.icon}
                   </div>
-                  <p className="text-2xl md:text-3xl font-bold text-white mb-1">
-                    {stat.value}
-                  </p>
+                  <p className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.value}</p>
                   <p className="text-white/60 text-sm">{stat.label}</p>
                 </div>
               </AnimatedSection>

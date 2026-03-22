@@ -11,12 +11,14 @@ const navItems = [
   { label: "Our Science", href: "/our-science" },
   { label: "Advisor", href: "/advisor" },
   { label: "Industries", href: "/industries" },
+  { label: "Platform", href: "/platform" },
   {
     label: "About",
     href: "/about",
     children: [
       { label: "About Us", href: "/about" },
       { label: "News", href: "/news" },
+      { label: "UFLPA Compliance", href: "/uflpa-compliance" },
     ],
   },
   { label: "Contact", href: "/contact" },

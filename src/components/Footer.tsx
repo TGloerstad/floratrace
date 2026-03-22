@@ -12,13 +12,12 @@ const footerLinks = [
     ],
   },
   {
-    title: "Industries",
+    title: "Solutions",
     links: [
-      { label: "Paprika & Natural Colors", href: "/industries" },
-      { label: "Coffee", href: "/industries" },
-      { label: "Cotton", href: "/industries" },
-      { label: "Food", href: "/industries" },
-      { label: "Hemp", href: "/industries" },
+      { label: "Client Portal", href: "/platform" },
+      { label: "UFLPA Compliance", href: "/uflpa-compliance" },
+      { label: "Industries", href: "/industries" },
+      { label: "Advisor", href: "/advisor" },
     ],
   },
 ];
