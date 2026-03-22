@@ -23,7 +23,8 @@ const navItems = [
     label: "About",
     href: "/about",
     children: [
-      { label: "About Us", href: "/about" },
+      { label: "Company", href: "/about" },
+      { label: "Team", href: "/about/team" },
       { label: "News", href: "/news" },
     ],
   },
