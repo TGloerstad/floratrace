@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   Building2,
   Users,
@@ -41,6 +42,7 @@ const leadership = [
   {
     name: "Terje Gloerstad",
     title: "Chief Executive Officer & Founder",
+    image: null as string | null,
     linkedin: "https://www.linkedin.com/in/terjeg/",
     bio: "Terje founded FloraTrace in 2020 to bring forensic science and data analytics to supply chain transparency. With an Executive MBA from London Business School and deep international business experience, he leads the company's strategic vision and growth.",
     credentials: ["Executive MBA, London Business School"],
@@ -48,6 +50,7 @@ const leadership = [
   {
     name: "Kimberley Gunther",
     title: "Co-Founder & Chief Strategist",
+    image: null as string | null,
     linkedin: "https://www.linkedin.com/in/kimberleygunther/",
     bio: "Kim co-founded FloraTrace and leads the company's strategic partnerships and customer solutions. She architected the KYG Trade integration that links origin verification to digital supply chain traceability, creating immutable audit records for regulatory compliance.",
     credentials: [],
@@ -55,6 +58,7 @@ const leadership = [
   {
     name: "Dr. Brett Tipple",
     title: "President & Chief Scientist",
+    image: null as string | null,
     linkedin: "https://www.linkedin.com/in/bretttipple/",
     bio: "Brett is a leading isotope geochemist with a PhD from Yale and 22+ years of experience in forensic geochemistry. He has authored 80+ peer-reviewed publications and serves as Adjunct Assistant Professor at the University of Utah. His research in isotope-based origin verification is the scientific backbone of FloraTrace.",
     credentials: ["PhD, Geology — Yale University", "80+ peer-reviewed publications", "Adjunct Assistant Professor, University of Utah"],
@@ -65,36 +69,42 @@ const advisors = [
   {
     name: "Brenda Brockman-Smith",
     title: "Trade & Compliance Advisor",
+    image: null as string | null,
     linkedin: "https://www.linkedin.com/in/brendabrockmansmith/",
     bio: "Former Executive Assistant Commissioner for International Trade at U.S. Customs and Border Protection, where she oversaw a $260M annual budget and led enforcement of trade laws on $4 trillion of annual trade. Recipient of a Presidential Rank Award as a Distinguished Executive in the top 1% of senior government executives. Licensed Customs Broker.",
   },
   {
     name: "Monica Jonas",
     title: "Operations & Strategy Advisor",
+    image: null as string | null,
     linkedin: "https://www.linkedin.com/in/monicajonas/",
     bio: "Former COO, Deputy CEO, and Interim Co-CEO at Oritain, the global leader in forensic origin verification, where she led 250+ employees across five countries and scaled the business to $40M+ ACV. Previously COO at WorkFusion and SVP of Global Business Operations at Viacom Media Networks. MS from Johns Hopkins.",
   },
   {
     name: "Greg Adams",
     title: "Commercial Strategy Advisor",
+    image: null as string | null,
     linkedin: "https://www.linkedin.com/in/gregadams1815/",
     bio: "Former VP of Sales for the Americas and Global Channels at Oritain, where he rebuilt the Americas sales team and improved business performance tracking. 29+ years of experience in enterprise go-to-market strategy. Wharton Executive Education. U.S. Army Veteran.",
   },
   {
     name: "Dr. Gabriel Bowen",
     title: "Scientific Advisor",
+    image: "/images/team/gabe-bowen.png",
     linkedin: "https://science.utah.edu/faculty/new-chair-of-geology-geophysics/",
     bio: "Professor and Chair of the Department of Geology & Geophysics at the University of Utah. Co-Director of the Stable Isotope Facility for Environmental Research (SIRFER) and founder of the SPATIAL Lab. His pioneering research in spatio-temporal isotope analytics underpins FloraTrace's origin fingerprinting methodology. PhD from UC Santa Cruz. 2024 Distinguished Research Awardee.",
   },
   {
     name: "Carli Rosencranz",
     title: "Brands & Sourcing Advisor",
+    image: null as string | null,
     linkedin: "https://www.linkedin.com/in/carlirosencranz/",
     bio: "25+ years in retail and CPG with deep expertise in global sourcing, private brands, and merchandising strategy. Former Senior Director of Global Sourcing at Walmart, where she led sourcing strategy for packaged foods and hot beverages. MS in Marketing from UT Arlington.",
   },
   {
     name: "Rob Fishman",
     title: "Insurance & Risk Advisor",
+    image: null as string | null,
     linkedin: "https://www.linkedin.com/in/robfishman/",
     bio: "39+ years as a C-suite executive in insurance and risk management, including leadership roles at Zurich, Progressive, ARAG, and HCC Insurance. At FloraTrace, he develops risk transfer and insurance solutions for companies facing forced labor compliance exposure. JD from University of Toledo. CPCU certified.",
   },
@@ -184,11 +194,23 @@ export default function AboutPage() {
               <AnimatedSection key={person.name} delay={i * 0.1}>
                 <div className="bg-white rounded-2xl border border-gray-medium/50 overflow-hidden hover:shadow-xl transition-all duration-300 group h-full flex flex-col">
                   <div className="bg-gradient-to-br from-navy to-navy-light p-8 text-center">
-                    <div className="w-20 h-20 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-white">
-                        {person.name.split(" ").map(n => n[0]).join("")}
-                      </span>
-                    </div>
+                    {person.image ? (
+                      <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-3 border-white/20">
+                        <Image
+                          src={person.image}
+                          alt={person.name}
+                          width={96}
+                          height={96}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-24 h-24 rounded-full bg-white/10 border-3 border-white/20 flex items-center justify-center mx-auto mb-4">
+                        <span className="text-2xl font-bold text-white">
+                          {person.name.split(" ").map(n => n[0]).join("")}
+                        </span>
+                      </div>
+                    )}
                     <h3 className="text-xl font-bold text-white mb-1">
                       {person.name}
                     </h3>
@@ -252,11 +274,23 @@ export default function AboutPage() {
               <AnimatedSection key={person.name} delay={i * 0.05}>
                 <div className="bg-white rounded-2xl border border-gray-medium/50 p-6 hover:shadow-xl transition-all duration-300 group h-full flex flex-col">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-navy/5 border border-navy/10 flex items-center justify-center flex-shrink-0 group-hover:bg-green/10 group-hover:border-green/20 transition-colors">
-                      <span className="text-sm font-bold text-navy group-hover:text-green transition-colors">
-                        {person.name.split(" ").map(n => n[0]).join("")}
-                      </span>
-                    </div>
+                    {person.image ? (
+                      <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-medium/50">
+                        <Image
+                          src={person.image}
+                          alt={person.name}
+                          width={56}
+                          height={56}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-14 h-14 rounded-full bg-navy/5 border border-navy/10 flex items-center justify-center flex-shrink-0 group-hover:bg-green/10 group-hover:border-green/20 transition-colors">
+                        <span className="text-sm font-bold text-navy group-hover:text-green transition-colors">
+                          {person.name.split(" ").map(n => n[0]).join("")}
+                        </span>
+                      </div>
+                    )}
                     <div>
                       <h3 className="text-lg font-bold text-navy">
                         {person.name}
