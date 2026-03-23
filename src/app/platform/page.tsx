@@ -194,20 +194,48 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      {/* Dashboard Deep Dive */}
+      {/* Analytics Deep Dive */}
       <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection direction="left">
-              <div className="relative">
-                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-medium/30">
-                  <Image
-                    src="/images/portal-analytics.png"
-                    alt="FloraTrace Origin Verification Analytics Dashboard"
-                    width={800}
-                    height={500}
-                    className="w-full h-auto"
-                  />
+              <div className="bg-white rounded-2xl border border-gray-medium/50 p-8 shadow-sm">
+                <p className="text-xs font-semibold text-navy/40 uppercase tracking-wider mb-6">
+                  Live Dashboard Metrics
+                </p>
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="bg-green/5 rounded-xl p-5 text-center">
+                    <p className="text-3xl font-bold text-green">98.2%</p>
+                    <p className="text-xs text-gray-dark mt-1">Verified Origins</p>
+                  </div>
+                  <div className="bg-orange/5 rounded-xl p-5 text-center">
+                    <p className="text-3xl font-bold text-orange">~14d</p>
+                    <p className="text-xs text-gray-dark mt-1">Avg. Turnaround</p>
+                  </div>
+                </div>
+                <div className="space-y-3 mb-6">
+                  {[
+                    { label: "Total Specimens", value: "1,247", pct: 100 },
+                    { label: "Origin Verified", value: "1,225", pct: 98 },
+                    { label: "Flagged for Review", value: "22", pct: 2 },
+                  ].map((row) => (
+                    <div key={row.label}>
+                      <div className="flex justify-between text-sm mb-1">
+                        <span className="text-navy font-medium">{row.label}</span>
+                        <span className="text-gray-dark">{row.value}</span>
+                      </div>
+                      <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-green rounded-full"
+                          style={{ width: `${row.pct}%` }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex items-center gap-2 text-xs text-navy/40">
+                  <div className="w-2 h-2 rounded-full bg-green animate-pulse" />
+                  Data reflects portal analytics view
                 </div>
               </div>
             </AnimatedSection>
@@ -227,17 +255,17 @@ export default function PlatformPage() {
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-4 p-4 rounded-xl bg-gray-light">
-                  <div className="text-3xl font-bold text-green">98.2%</div>
+                  <BarChart3 className="w-8 h-8 text-green flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-navy text-sm">Verified Origins</p>
-                    <p className="text-gray-dark text-xs">Accuracy rate across all specimens analyzed</p>
+                    <p className="font-semibold text-navy text-sm">Origin Distribution</p>
+                    <p className="text-gray-dark text-xs">Interactive charts showing geographic origin breakdown by supplier and product line</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 p-4 rounded-xl bg-gray-light">
-                  <div className="text-3xl font-bold text-orange">1,247</div>
+                  <Filter className="w-8 h-8 text-orange flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-navy text-sm">Specimens Tracked</p>
-                    <p className="text-gray-dark text-xs">With full provenance data across 12 active regions</p>
+                    <p className="font-semibold text-navy text-sm">Risk Flagging</p>
+                    <p className="text-gray-dark text-xs">Automatic alerts when specimens indicate at-risk origins or origin claim mismatches</p>
                   </div>
                 </div>
               </div>

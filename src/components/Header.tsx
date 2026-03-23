@@ -8,7 +8,6 @@ import Logo from "./Logo";
 import CTAButton from "./CTAButton";
 
 const navItems = [
-  { label: "Our Science", href: "/our-science" },
   {
     label: "Solutions",
     href: "/advisor",
@@ -19,6 +18,7 @@ const navItems = [
   },
   { label: "Industries", href: "/industries" },
   { label: "Platform", href: "/platform" },
+  { label: "Our Science", href: "/our-science" },
   {
     label: "About",
     href: "/about",

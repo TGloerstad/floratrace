@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     "supply chain transparency",
     "UFLPA compliance",
     "isotopic testing",
+    "trace element analysis",
     "geographic origin",
     "sustainable sourcing",
     "forced labor prevention",

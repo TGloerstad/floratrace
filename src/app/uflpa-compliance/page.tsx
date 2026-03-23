@@ -26,22 +26,22 @@ const riskSectors = [
   {
     icon: <Package className="w-6 h-6" />,
     name: "Cotton & Textiles",
-    detail: "Xinjiang produces ~85% of China's cotton, which accounts for ~20% of global production",
+    detail: "At-risk regions produce a significant share of China's cotton, accounting for ~20% of global production",
   },
   {
     icon: <Building2 className="w-6 h-6" />,
     name: "Paprika & Natural Colors",
-    detail: "XUAR produces ~70% of the world's paprika — our survey found 61% of U.S. retail paprika flagged Xinjiang",
+    detail: "At-risk regions produce ~70% of the world's paprika — our survey found 61% of U.S. retail paprika flagged as originating from at-risk areas",
   },
   {
     icon: <Globe className="w-6 h-6" />,
     name: "Tomatoes & Food Products",
-    detail: "Xinjiang is a major tomato-producing region with documented forced labor programs",
+    detail: "Regions subject to the UFLPA are major tomato-producing areas with documented forced labor programs",
   },
   {
     icon: <FlaskConical className="w-6 h-6" />,
     name: "Polysilicon & Solar",
-    detail: "45% of global polysilicon originates from XUAR, subject to WROs",
+    detail: "45% of global polysilicon originates from regions subject to Withhold Release Orders (WROs) under the UFLPA",
   },
 ];
 
@@ -61,8 +61,8 @@ const processSteps = [
   {
     step: "03",
     icon: <Microscope className="w-6 h-6" />,
-    title: "Isotopic Analysis",
-    description: "ICP-MS and MC-ICP-MS analysis in accredited labs to determine geographic origin fingerprint.",
+    title: "Isotopic & Trace Element Analysis",
+    description: "ICP-MS and MC-ICP-MS isotopic and elemental analysis in accredited labs to determine geographic origin fingerprint.",
   },
   {
     step: "04",
@@ -74,7 +74,7 @@ const processSteps = [
     step: "05",
     icon: <FileText className="w-6 h-6" />,
     title: "CBP-Ready Report",
-    description: "Court-admissible verification report formatted for CBP submission and Daubert Standard compliance.",
+    description: "Court-admissible verification report formatted for U.S. Customs and Border Protection (CBP) submission and Daubert Standard compliance.",
   },
 ];
 
@@ -111,10 +111,10 @@ export default function UFLPACompliancePage() {
                 <span className="text-green-light">Free of Forced Labor</span>
               </h1>
               <p className="text-white/70 text-lg leading-relaxed mb-4 max-w-2xl">
-                The Uyghur Forced Labor Prevention Act (UFLPA) creates a
-                rebuttable presumption that all goods from Xinjiang are made
-                with forced labor. If your products are detained at the border,
-                you need objective, scientific evidence to prove otherwise.
+                The Uyghur Forced Labor Prevention Act (UFLPA) presumes that
+                goods from at-risk regions are made with forced labor. If your
+                products are detained at the border, you need objective,
+                scientific evidence to prove otherwise.
               </p>
               <p className="text-white/50 leading-relaxed mb-8 max-w-2xl">
                 FloraTrace provides court-admissible, forensic origin
@@ -146,28 +146,30 @@ export default function UFLPACompliancePage() {
                 What Is the UFLPA and Why Does It Matter?
               </h2>
               <p className="text-gray-dark leading-relaxed mb-4">
-                Signed into law on December 23, 2021, the UFLPA prohibits the
-                importation of goods produced wholly or in part in the Xinjiang
-                Uyghur Autonomous Region (XUAR) of China. It imposes a
-                rebuttable presumption: all goods from the region are
-                presumed to be made with forced labor unless the importer
-                can demonstrate otherwise with clear and convincing evidence.
+                Signed into law on December 23, 2021, the Uyghur Forced Labor
+                Prevention Act (UFLPA) prohibits the importation of goods
+                produced wholly or in part in regions of China identified as
+                at-risk for forced labor. Under the UFLPA, all goods from these
+                regions are presumed to be made with forced labor unless the
+                importer can demonstrate otherwise with clear and convincing
+                evidence.
               </p>
               <p className="text-gray-dark leading-relaxed mb-6">
-                CBP enforces the UFLPA through Withhold Release Orders (WROs)
-                and has detained and seized hundreds of millions of dollars
-                worth of goods since enforcement began in June 2022.
+                U.S. Customs and Border Protection (CBP) enforces the UFLPA
+                through Withhold Release Orders (WROs) and has detained and
+                seized hundreds of millions of dollars worth of goods since
+                enforcement began in June 2022.
               </p>
               <div className="bg-orange/5 border border-orange/20 rounded-xl p-6">
                 <div className="flex items-start gap-3">
                   <AlertTriangle className="w-5 h-5 text-orange flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold text-navy text-sm mb-1">
-                      Rebuttable Presumption
+                      The Burden Is on the Importer
                     </p>
                     <p className="text-gray-dark text-sm leading-relaxed">
                       Paper-based traceability alone is often insufficient to
-                      overcome the presumption. CBP is increasingly looking for
+                      prove compliance. CBP is increasingly looking for
                       independent, scientific verification of geographic origin.
                     </p>
                   </div>
@@ -193,7 +195,7 @@ export default function UFLPACompliancePage() {
                     },
                     {
                       stat: "100%",
-                      detail: "Of XUAR-origin goods presumed made with forced labor",
+                      detail: "Of goods from at-risk regions presumed made with forced labor",
                     },
                     {
                       stat: "6,000+",
@@ -225,7 +227,7 @@ export default function UFLPACompliancePage() {
           <SectionHeading
             eyebrow="High-Risk Sectors"
             title="Industries Most Affected by UFLPA"
-            subtitle="These sectors have the highest exposure to XUAR-origin materials and face the greatest enforcement risk."
+            subtitle="These sectors have the highest exposure to materials from at-risk regions and face the greatest enforcement risk."
           />
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -252,7 +254,7 @@ export default function UFLPACompliancePage() {
         </div>
       </section>
 
-      {/* Audits vs Isotopic Comparison */}
+      {/* Audits vs Forensic Science Comparison */}
       <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -261,14 +263,15 @@ export default function UFLPACompliancePage() {
                 Why Forensic Science
               </p>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-navy leading-tight mb-6">
-                Audits Can Be Fooled. Isotopes Can&apos;t.
+                Audits Can Be Fooled. Forensic Science Can&apos;t.
               </h2>
               <p className="text-gray-dark leading-relaxed mb-6">
                 Traditional supply chain audits rely on documentation and
                 supplier declarations that can be falsified or laundered
                 through transshipment. FloraTrace tests the product itself
-                using forensic isotopic analysis, providing objective evidence
-                that is independent of supply chain documentation.
+                using forensic isotopic and trace element analysis, providing
+                objective evidence that is independent of supply chain
+                documentation.
               </p>
               <CTAButton href="/our-science">
                 <span className="flex items-center gap-2">
@@ -333,7 +336,8 @@ export default function UFLPACompliancePage() {
               From Risk Assessment to CBP-Ready Report
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto leading-relaxed">
-              A proven 5-step process designed for importers who need to demonstrate UFLPA compliance.
+              A proven 5-step process designed for importers who need to demonstrate
+              Uyghur Forced Labor Prevention Act (UFLPA) compliance.
             </p>
           </div>
 

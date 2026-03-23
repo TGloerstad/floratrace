@@ -22,7 +22,7 @@ import CTAButton from "@/components/CTAButton";
 export const metadata: Metadata = {
   title: "Our Science",
   description:
-    "Learn about FloraTrace's cutting-edge isotopic testing and origin verification science for supply chain transparency.",
+    "Learn about FloraTrace's cutting-edge isotopic and trace element analysis for origin verification and supply chain transparency.",
 };
 
 const expertiseAreas = [
@@ -41,9 +41,9 @@ const expertiseAreas = [
 const scienceCapabilities = [
   {
     icon: <Microscope className="w-7 h-7" />,
-    title: "Isotopic Analysis",
+    title: "Isotopic & Trace Element Analysis",
     description:
-      "Advanced isotopic fingerprinting to determine the geographic origin of raw materials with scientific precision.",
+      "Advanced isotopic and trace element fingerprinting to determine the geographic origin of raw materials with scientific precision.",
   },
   {
     icon: <MapPin className="w-7 h-7" />,
@@ -76,11 +76,11 @@ export default function OurSciencePage() {
               Greater Transparency
             </p>
             <h1 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight max-w-3xl mx-auto">
-              What is Isotopic Testing?
+              The Science of Origin Verification
             </h1>
             <p className="mt-6 text-white/70 text-lg max-w-2xl mx-auto">
-              Pioneering forensic chemistry and isotopic analysis for supply
-              chain transparency and origin verification.
+              Pioneering forensic isotopic and trace element analysis for
+              supply chain transparency and origin verification.
             </p>
           </AnimatedSection>
         </div>

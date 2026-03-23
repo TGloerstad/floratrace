@@ -33,9 +33,9 @@ import SectionHeading from "@/components/SectionHeading";
 const valueProps = [
   {
     icon: <Globe className="w-7 h-7" />,
-    title: "Global Isotopic Testing",
+    title: "Global Origin Testing",
     description:
-      "Retailers and brands demand transparency from suppliers. Our testing capabilities span the globe.",
+      "Retailers and brands demand transparency from suppliers. Our isotopic and trace element testing capabilities span the globe.",
   },
   {
     icon: <ShieldCheck className="w-7 h-7" />,
@@ -118,7 +118,7 @@ const whyForensic = [
   {
     icon: <FileX2 className="w-6 h-6" />,
     problem: "Paper trails can be falsified",
-    solution: "We test the product itself -- isotopic signatures cannot be forged or altered.",
+    solution: "We test the product itself -- isotopic and trace element signatures cannot be forged or altered.",
   },
   {
     icon: <ScanSearch className="w-6 h-6" />,
@@ -266,8 +266,8 @@ export default function HomePage() {
                 Traditional traceability relies on documentation, audits, and
                 supplier declarations -- all of which can be manipulated.
                 FloraTrace tests the product itself using forensic isotopic
-                analysis, providing objective, court-admissible evidence of
-                geographic origin.
+                and trace element analysis, providing objective, court-admissible
+                evidence of geographic origin.
               </p>
               <div className="space-y-6">
                 {whyForensic.map((item, i) => (
@@ -377,14 +377,14 @@ export default function HomePage() {
                 Our retail survey tested 28 paprika products across 9 U.S.
                 grocery stores. The results are striking: 100% were
                 predicted Chinese origin -- not a single one from the U.S. --
-                and 61% were flagged as originating from Xinjiang, a region
-                subject to the UFLPA.
+                and 61% were flagged as originating from a region subject to
+                the Uyghur Forced Labor Prevention Act (UFLPA).
               </p>
               <p className="text-white/70 leading-relaxed mb-8">
                 As CPG companies race to replace artificial colors with natural
-                ones, paprika oleoresin demand is surging. FloraTrace&apos;s forensic
-                isotopic testing can verify the geographic origin of peppers and
-                paprika at the molecular level.
+                ones,                 paprika oleoresin demand is surging. FloraTrace&apos;s forensic
+                isotopic and trace element analysis can verify the geographic
+                origin of peppers and paprika at the molecular level.
               </p>
               <CTAButton href="/industries">
                 <span className="flex items-center gap-2">
@@ -401,11 +401,11 @@ export default function HomePage() {
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/10">
                   <p className="text-4xl font-bold text-green-light mb-1">61%</p>
-                  <p className="text-white/60 text-xs leading-tight">flagged Xinjiang (XUAR)</p>
+                  <p className="text-white/60 text-xs leading-tight">flagged as at-risk origin</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/10">
                   <p className="text-4xl font-bold text-white mb-1">70%</p>
-                  <p className="text-white/60 text-xs leading-tight">of world&apos;s paprika from XUAR</p>
+                  <p className="text-white/60 text-xs leading-tight">of world&apos;s paprika from at-risk regions</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/10">
                   <p className="text-4xl font-bold text-white mb-1">~14</p>

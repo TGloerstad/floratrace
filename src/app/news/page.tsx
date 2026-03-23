@@ -9,9 +9,18 @@ export const metadata: Metadata = {
 
 const newsItems = [
   {
+    title: "FloraTrace at ASTA 2026 Annual Meeting & Exhibits",
+    description:
+      "FloraTrace will be attending the American Spice Trade Association (ASTA) 2026 Annual Meeting & Exhibits, April 21–23 at La Quinta Resort & Club in Palm Springs, CA. Connect with our team to learn how forensic origin verification is helping the spice industry address UFLPA compliance and supply chain transparency challenges.",
+    link: {
+      url: "https://astaspice.org/events/2026-annual-meeting-exhibits",
+      label: "Event Details",
+    },
+  },
+  {
     title: "FloraTrace at AAEI's 102nd Annual Conference and Expo",
     description:
-      "Brett Tipple, PhD, Chief Scientist at FloraTrace spoke about isotopic testing and chemical analysis used for origin verification for supply chain transparency. Knowing where goods originate and identifying forced labor prone sourcing, empowers companies to remediate, diversify or decouple from forced labor to comply with the UFLPA.",
+      "Brett Tipple, PhD, Chief Scientist at FloraTrace spoke about isotopic and trace element analysis used for origin verification for supply chain transparency. Knowing where goods originate and identifying forced labor prone sourcing, empowers companies to remediate, diversify or decouple from forced labor to comply with the Uyghur Forced Labor Prevention Act (UFLPA).",
   },
   {
     title: "FloraTrace Welcomes New Advisor: Carli Rosencranz",

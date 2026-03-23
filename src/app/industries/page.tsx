@@ -19,9 +19,9 @@ import CTAButton from "@/components/CTAButton";
 
 const paprikaStats = [
   { value: "100%", label: "of retail paprika predicted Chinese origin — none labeled as such" },
-  { value: "61%", label: "flagged as originating from Xinjiang (XUAR)" },
-  { value: "25%", label: "with U.S. origin claims predicted Chinese — 71% of those flagged Xinjiang" },
-  { value: "70%", label: "of world's paprika grown in XUAR region" },
+  { value: "61%", label: "flagged as originating from at-risk regions for forced labor" },
+  { value: "25%", label: "with U.S. origin claims predicted Chinese — 71% of those flagged as at-risk origin" },
+  { value: "70%", label: "of world's paprika grown in regions subject to the UFLPA" },
 ];
 
 const caseStudies = [
@@ -36,14 +36,14 @@ const caseStudies = [
     eyebrow: "Supporting the cotton ecosystem",
     title: "Cotton - Mislabeling",
     description:
-      "A key supply chain risk is mislabeling of raw materials origin to hide materials from regions utilizing forced labor. Our technologies monitor the actual material, not just the label on the packaging. Consider cotton garments produced in China using Xinjiang-grown cotton, transshipped to Vietnam, and exported to the US labeled as \"Made in Vietnam\". Our technologies detect the geographic origin of the raw material.",
+      "A key supply chain risk is mislabeling of raw materials origin to hide materials from regions utilizing forced labor. Our technologies monitor the actual material, not just the label on the packaging. Consider cotton garments produced in China using cotton from at-risk regions, transshipped to Vietnam, and exported to the U.S. labeled as \"Made in Vietnam\". Our isotopic and trace element analysis detects the geographic origin of the raw material.",
     icon: <Wheat className="w-7 h-7" />,
   },
   {
     eyebrow: "Supporting the food ecosystem",
     title: "Tomatoes and Mixing/Commingling",
     description:
-      "A key risk in supply chains is purposely commingling or mixing raw materials from different geographic origins to launder illicit materials. An example would be mixing of Xinjiang tomatoes with tomatoes grown in India to be exported as \"Indian Tomatoes\" for processing in Italy. Our technologies detect and identify geographic origin of mixture components.",
+      "A key risk in supply chains is purposely commingling or mixing raw materials from different geographic origins to launder illicit materials. An example would be mixing tomatoes from at-risk regions with tomatoes grown in India to be exported as \"Indian Tomatoes\" for processing in Italy. Our isotopic and trace element analysis detects and identifies geographic origin of mixture components.",
     icon: <Leaf className="w-7 h-7" />,
   },
   {
@@ -97,16 +97,18 @@ export default function IndustriesPage() {
                 The U.S. food industry is rapidly shifting from synthetic to
                 natural colorants, with paprika oleoresin among the most
                 important. However, an estimated 70% of the world&apos;s paprika
-                peppers are grown in the Xinjiang Uyghur Autonomous Region
-                (XUAR) of China, where forced labor practices make any product
-                derived from XUAR paprika subject to the UFLPA.
+                peppers are grown in regions of China identified as at-risk for
+                forced labor under the Uyghur Forced Labor Prevention Act
+                (UFLPA), making any product derived from these areas subject to
+                import restrictions.
               </p>
               <p className="text-gray-dark leading-relaxed mb-6">
                 As demand for natural colorants surges -- the paprika oleoresin
                 market is expected to grow from $150M to $260M in five years --
-                the risk of XUAR-tainted paprika entering U.S. supply chains has
-                never been higher. FloraTrace can identify the geographic origin
-                of peppers and paprika through forensic isotopic fingerprinting.
+                the risk of paprika from at-risk regions entering U.S. supply
+                chains has never been higher. FloraTrace can identify the
+                geographic origin of peppers and paprika through forensic
+                isotopic and trace element fingerprinting.
               </p>
 
               <div className="space-y-4 mb-8">
@@ -114,9 +116,10 @@ export default function IndustriesPage() {
                   <AlertTriangle className="w-5 h-5 text-orange flex-shrink-0 mt-0.5" />
                   <p className="text-sm text-gray-dark">
                     <span className="font-semibold text-navy">UFLPA Risk:</span>{" "}
-                    XUAR-grown paprika cannot be imported into the United
-                    States. India produces 88% of paprika oleoresins, primarily
-                    using imported peppers -- many from XUAR.
+                    Paprika from at-risk regions for forced labor cannot be
+                    imported into the United States. India produces 88% of
+                    paprika oleoresins, primarily using imported peppers -- many
+                    from these at-risk areas.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">

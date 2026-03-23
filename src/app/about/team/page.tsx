@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import {
-  Linkedin,
   ArrowRight,
   GraduationCap,
   Briefcase,
@@ -10,6 +9,7 @@ import {
 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import CTAButton from "@/components/CTAButton";
+import LinkedInIcon from "@/components/LinkedInIcon";
 
 const leadership = [
   {
@@ -17,8 +17,12 @@ const leadership = [
     title: "Chief Executive Officer & Founder",
     image: "/images/team/terje-gloerstad.png",
     linkedin: "https://www.linkedin.com/in/terjeg/",
-    bio: "Terje founded FloraTrace in 2020 to bring forensic science and data analytics to supply chain transparency. With an Executive MBA from London Business School and deep international business experience, he leads the company's strategic vision and growth.",
-    credentials: ["Executive MBA, London Business School"],
+    bio: "Terje founded FloraTrace in 2020 to bring forensic science and data analytics to supply chain transparency. With decades of international business experience spanning corporate strategy and venture leadership, he drives FloraTrace's vision to make origin verification accessible to companies of all sizes.",
+    credentials: [
+      "Executive MBA, London Business School",
+      "Founded FloraTrace, pioneering forensic origin verification for trade compliance",
+      "International corporate strategy and venture leadership across multiple industries",
+    ],
   },
   {
     name: "Kimberley Gunther",
@@ -26,7 +30,11 @@ const leadership = [
     image: "/images/team/kimberley-gunther.png",
     linkedin: "https://www.linkedin.com/in/kimberleygunther/",
     bio: "Kim co-founded FloraTrace and leads the company's strategic partnerships and customer solutions. She architected the KYG Trade integration that links origin verification to digital supply chain traceability, creating immutable audit records for regulatory compliance.",
-    credentials: [],
+    credentials: [
+      "Co-Founded FloraTrace, shaping go-to-market and customer strategy",
+      "Architected the KYG Trade partnership linking forensic verification to digital traceability",
+      "Supply chain compliance strategy and partner ecosystem development",
+    ],
   },
   {
     name: "Dr. Brett Tipple",
@@ -34,7 +42,11 @@ const leadership = [
     image: "/images/team/brett-tipple.png",
     linkedin: "https://www.linkedin.com/in/bretttipple/",
     bio: "Brett is a leading isotope geochemist with a PhD from Yale and 22+ years of experience in forensic geochemistry. He has authored 80+ peer-reviewed publications and serves as Adjunct Assistant Professor at the University of Utah. His research in isotope-based origin verification is the scientific backbone of FloraTrace.",
-    credentials: ["PhD, Geology — Yale University", "80+ peer-reviewed publications", "Adjunct Assistant Professor, University of Utah"],
+    credentials: [
+      "PhD, Geology — Yale University",
+      "80+ peer-reviewed publications",
+      "Adjunct Assistant Professor, University of Utah",
+    ],
   },
 ];
 
@@ -44,21 +56,21 @@ const advisors = [
     title: "Trade & Compliance Advisor",
     image: "/images/team/brenda-brockman-smith.png",
     linkedin: "https://www.linkedin.com/in/brendabrockmansmith/",
-    bio: "Former Executive Assistant Commissioner for International Trade at U.S. Customs and Border Protection, where she oversaw a $260M annual budget and led enforcement of trade laws on $4 trillion of annual trade. Recipient of a Presidential Rank Award as a Distinguished Executive in the top 1% of senior government executives. Licensed Customs Broker.",
+    bio: "Former Executive Assistant Commissioner for International Trade at U.S. Customs and Border Protection (CBP), where she oversaw a $260M annual budget and led enforcement of trade laws on $4 trillion of annual trade. Recipient of a Presidential Rank Award as a Distinguished Executive in the top 1% of senior government executives. Licensed Customs Broker.",
   },
   {
     name: "Monica Jonas",
     title: "Operations & Strategy Advisor",
     image: "/images/team/monica-jonas.png",
     linkedin: "https://www.linkedin.com/in/monicajonas/",
-    bio: "Former COO, Deputy CEO, and Interim Co-CEO at Oritain, the global leader in forensic origin verification, where she led 250+ employees across five countries and scaled the business to $40M+ ACV. Previously COO at WorkFusion and SVP of Global Business Operations at Viacom Media Networks. MS from Johns Hopkins.",
+    bio: "Seasoned executive with deep experience scaling forensic origin verification businesses globally. Former COO and Deputy CEO at a leading forensic science company, where she led 250+ employees across five countries. Previously COO at WorkFusion and SVP of Global Business Operations at Viacom Media Networks. MS from Johns Hopkins.",
   },
   {
     name: "Greg Adams",
     title: "Commercial Strategy Advisor",
     image: "/images/team/greg-adams.png",
     linkedin: "https://www.linkedin.com/in/gregadams1815/",
-    bio: "Former VP of Sales for the Americas and Global Channels at Oritain, where he rebuilt the Americas sales team and improved business performance tracking. 29+ years of experience in enterprise go-to-market strategy. Wharton Executive Education. U.S. Army Veteran.",
+    bio: "29+ years of experience in enterprise go-to-market strategy with a focus on forensic science and compliance solutions. Proven track record building and leading sales teams across the Americas and global channels. Wharton Executive Education. U.S. Army Veteran.",
   },
   {
     name: "Dr. Gabriel Bowen",
@@ -80,6 +92,27 @@ const advisors = [
     image: "/images/team/rob-fishman.png",
     linkedin: "https://www.linkedin.com/in/robfishman/",
     bio: "39+ years as a C-suite executive in insurance and risk management, including leadership roles at Zurich, Progressive, ARAG, and HCC Insurance. At FloraTrace, he develops risk transfer and insurance solutions for companies facing forced labor compliance exposure. JD from University of Toledo. CPCU certified.",
+  },
+  {
+    name: "Dr. Cedric Hagen",
+    title: "Data Science & Geostatistics Advisor",
+    image: "",
+    linkedin: "https://www.linkedin.com/in/cedric-hagen/",
+    bio: "Data Scientist and Geostatistician at FloraTrace. Develops machine learning and AI workflows for supply chain origin tracing and statistical analyses. PhD from Oregon State University, Agouron Postdoctoral Fellow at Princeton University. Research Affiliate at CU Boulder.",
+  },
+  {
+    name: "Jeff Wallace",
+    title: "Startup & Business Strategy Advisor",
+    image: "",
+    linkedin: "https://www.linkedin.com/in/jeffwallace913/",
+    bio: "Serial entrepreneur and startup advisor with 38+ years guiding companies across 40+ countries. Co-Founder of Silicon Valley in Your Pocket and The Batchery. LP in Berkeley SkyDeck and Supporters Fund. MBA from UC Berkeley Haas School of Business.",
+  },
+  {
+    name: "John Howa",
+    title: "Analytical Chemistry Advisor",
+    image: "",
+    linkedin: "https://www.linkedin.com/in/john-howa-6272a563/",
+    bio: "Chemist and Client Success lead at FloraTrace with 25+ years of experience in analytical chemistry and isotope ratio mass spectrometry (IRMS). Former Chemist and QA Officer at IsoForensics and IRMS Specialist at SMRTL. BA in Chemistry from Reed College.",
   },
 ];
 
@@ -166,7 +199,7 @@ export default function TeamPage() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-navy hover:text-green transition-colors text-sm font-medium"
                       >
-                        <Linkedin className="w-4 h-4" />
+                        <LinkedInIcon className="w-4 h-4" />
                         LinkedIn Profile
                         <ExternalLink className="w-3 h-3" />
                       </a>
@@ -237,7 +270,7 @@ export default function TeamPage() {
                         className="inline-flex items-center gap-1.5 text-navy hover:text-green transition-colors text-sm font-medium"
                       >
                         {person.linkedin.includes("linkedin.com") ? (
-                          <Linkedin className="w-4 h-4" />
+                          <LinkedInIcon className="w-4 h-4" />
                         ) : (
                           <Briefcase className="w-4 h-4" />
                         )}
