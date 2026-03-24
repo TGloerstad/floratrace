@@ -159,7 +159,7 @@ export default function IndustriesPage() {
                   </p>
                 </div>
                 <h3 className="text-2xl font-display font-bold text-white mb-2">
-                  What&apos;s Really in Your Paprika?
+                  How Much Illegal Paprika Is in Your Supply Chain?
                 </h3>
                 <p className="text-white/60 text-sm mb-8">
                   Origin verification of 28 retail paprika products across 9

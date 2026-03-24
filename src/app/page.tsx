@@ -411,7 +411,7 @@ export default function HomePage() {
                 </p>
               </div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-white leading-tight mb-6">
-                What&apos;s Really in Your Paprika?
+                How Much Illegal Paprika Is in Your Supply Chain?
               </h2>
               <p className="text-white/70 leading-relaxed mb-6">
                 Our retail survey tested 28 paprika products across 9 U.S.
