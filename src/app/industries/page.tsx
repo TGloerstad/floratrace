@@ -26,28 +26,28 @@ const paprikaStats = [
 
 const caseStudies = [
   {
-    eyebrow: "Supporting the coffee ecosystem",
+    eyebrow: "Supporting the coffee supply chain",
     title: "Coffee Verification Program",
     description:
       "FloraTrace provides targeted solutions for the coffee industry. Coffee growers, distributors and retailers seek to protect and demonstrate that their products are authentic and derive from specific locations. Our origin fingerprinting technology was central evidence in a landmark $40M+ class action lawsuit regarding false designation of origin for Kona coffee.",
     icon: <Coffee className="w-7 h-7" />,
   },
   {
-    eyebrow: "Supporting the cotton ecosystem",
+    eyebrow: "Supporting the cotton supply chain",
     title: "Cotton - Mislabeling",
     description:
       "A key supply chain risk is mislabeling of raw materials origin to hide materials from regions utilizing forced labor. Our technologies monitor the actual material, not just the label on the packaging. Consider cotton garments produced in China using cotton from at-risk regions, transshipped to Vietnam, and exported to the U.S. labeled as \"Made in Vietnam\". Our isotopic and trace element analysis detects the geographic origin of the raw material.",
     icon: <Wheat className="w-7 h-7" />,
   },
   {
-    eyebrow: "Supporting the food ecosystem",
+    eyebrow: "Supporting the food supply chain",
     title: "Tomatoes and Mixing/Commingling",
     description:
       "A key risk in supply chains is purposely commingling or mixing raw materials from different geographic origins to launder illicit materials. An example would be mixing tomatoes from at-risk regions with tomatoes grown in India to be exported as \"Indian Tomatoes\" for processing in Italy. Our isotopic and trace element analysis detects and identifies geographic origin of mixture components.",
     icon: <Leaf className="w-7 h-7" />,
   },
   {
-    eyebrow: "Supporting the hemp ecosystem",
+    eyebrow: "Supporting the hemp supply chain",
     title: "Hemp Verification Program",
     description:
       "Hemp oil and hemp-derived CBD are becoming ubiquitous in consumer-packaged goods. Consumers pay higher prices for products grown in well-known regions and produced in specific ways. Growers operating within these regions seek to elevate the value of their product and protect their brand identity and integrity.",
