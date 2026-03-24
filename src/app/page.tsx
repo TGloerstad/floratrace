@@ -102,7 +102,7 @@ const processSteps = [
   {
     icon: <FileCheck className="w-7 h-7" />,
     step: "04",
-    title: "Verified Report",
+    title: "Compliance Results",
     description: "Court-ready verified report with confidence scores, delivered via our secure client portal.",
   },
 ];
