@@ -184,11 +184,10 @@ export default function AdvisorPage() {
                 product origins at scale.
               </p>
               <p className="text-gray-dark leading-relaxed mb-8">
-                Our proprietary framework integrates 7 meteorological data
-                sources, precipitation isoscapes, WorldClim climate datasets,
-                satellite phenology, GNIP metadata, civil aviation networks, and
-                empirical calibration samples into a unified prediction model --
-                enabling rapid deployment to new commodities worldwide.
+                Our proprietary framework combines authoritative climate and
+                environmental signals, geospatial intelligence, and calibrated
+                reference data into a unified prediction model -- enabling rapid
+                deployment to new commodities worldwide.
               </p>
               <CTAButton>Learn More</CTAButton>
             </AnimatedSection>
