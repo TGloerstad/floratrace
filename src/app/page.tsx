@@ -265,8 +265,8 @@ export default function HomePage() {
               <p className="text-gray-dark leading-relaxed mb-8">
                 Traditional traceability relies on documentation, audits, and
                 supplier declarations -- all of which can be manipulated.
-                FloraTrace tests the product itself using forensic isotopic
-                and trace element analysis, providing objective, court-admissible
+                FloraTrace tests the product itself using forensic chemical
+                analysis, providing objective, court-admissible
                 evidence of geographic origin.
               </p>
               <div className="space-y-6">
