@@ -198,7 +198,7 @@ export default function UFLPACompliancePage() {
                       detail: "Of goods from at-risk regions presumed made with forced labor",
                     },
                     {
-                      stat: "6,000+",
+                      stat: "42,000+",
                       detail: "Shipments examined under UFLPA enforcement",
                     },
                   ].map((item) => (
