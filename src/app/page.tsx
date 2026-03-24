@@ -151,9 +151,8 @@ export default function HomePage() {
                 transition={{ duration: 0.7 }}
                 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-navy leading-[1.1]"
               >
-                We provide origin verification for{" "}
-                <span className="text-green">sustainable sourcing</span> to
-                protect brand reputation
+                Know the true origin of your supply chain —{" "}
+                <span className="text-green">before regulators ask</span>
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -161,9 +160,9 @@ export default function HomePage() {
                 transition={{ duration: 0.7, delay: 0.2 }}
                 className="mt-6 text-lg text-gray-dark leading-relaxed max-w-xl"
               >
-                Our services include geographic origin verification for
-                companies, both large and small, seeking to comply with UFLPA,
-                anti-dumping, countervailing, free trade agreement requirements,
+                Verify geographic origin with science, not paperwork.
+                For companies seeking to comply with UFLPA, anti-dumping,
+                countervailing, free trade agreement requirements,
                 deforestation and The Lacey Act.
               </motion.p>
               <motion.div
