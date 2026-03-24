@@ -190,7 +190,7 @@ export default function UFLPACompliancePage() {
                       detail: "UFLPA enforcement began",
                     },
                     {
-                      stat: "$2.4B+",
+                      stat: "$3.94B+",
                       detail: "Value of goods detained or seized under UFLPA",
                     },
                     {
