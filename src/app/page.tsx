@@ -218,7 +218,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="How It Works"
             title="From Sample to Verified Origin"
-            subtitle="A clear, science-based process with results delivered in approximately 14 days."
+            subtitle="A compliance platform with a clear, science-based process delivering results in approximately 14 days."
           />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
