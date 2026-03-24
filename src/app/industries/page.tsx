@@ -139,8 +139,8 @@ export default function IndustriesPage() {
                     <span className="font-semibold text-navy">
                       How It Works:
                     </span>{" "}
-                    Sample collection, elemental and isotopic analysis using
-                    ICP-MS and MC-ICP-MS, ML-driven origin prediction.
+                    Sample collection, elemental and isotopic analysis,
+                    ML-driven origin prediction.
                     Turnaround in ~14 days.
                   </p>
                 </div>

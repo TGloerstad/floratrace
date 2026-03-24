@@ -62,7 +62,7 @@ const processSteps = [
     step: "03",
     icon: <Microscope className="w-6 h-6" />,
     title: "Isotopic & Trace Element Analysis",
-    description: "ICP-MS and MC-ICP-MS isotopic and elemental analysis in accredited labs to determine geographic origin fingerprint.",
+    description: "Isotopic and elemental analysis in accredited labs to determine geographic origin fingerprint.",
   },
   {
     step: "04",

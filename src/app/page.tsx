@@ -91,7 +91,7 @@ const processSteps = [
     icon: <Microscope className="w-7 h-7" />,
     step: "02",
     title: "Chemical Analysis",
-    description: "ICP-MS and MC-ICP-MS elemental and isotopic analysis in our accredited laboratories.",
+    description: "Elemental and isotopic analysis in our accredited laboratories.",
   },
   {
     icon: <Fingerprint className="w-7 h-7" />,
