@@ -155,10 +155,9 @@ export default function UFLPACompliancePage() {
                 evidence.
               </p>
               <p className="text-gray-dark leading-relaxed mb-6">
-                U.S. Customs and Border Protection (CBP) enforces the UFLPA
-                through Withhold Release Orders (WROs) and has detained and
-                seized hundreds of millions of dollars worth of goods since
-                enforcement began in June 2022.
+                U.S. Customs and Border Protection (CBP) enforces the UFLPA and
+                has detained and seized hundreds of millions of dollars worth of
+                goods since enforcement began in June 2022.
               </p>
               <div className="bg-orange/5 border border-orange/20 rounded-xl p-6">
                 <div className="flex items-start gap-3">
