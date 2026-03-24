@@ -291,21 +291,25 @@ export default function HomePage() {
 
             <AnimatedSection direction="right">
               <div className="bg-white rounded-2xl border border-gray-medium/50 p-8 md:p-10">
-                <div className="grid grid-cols-[minmax(0,1fr)_9rem_9rem] gap-x-3 gap-y-4 items-center">
+                <div className="grid grid-cols-[minmax(0,1fr)_13rem_13rem] gap-x-3 gap-y-4 items-stretch sm:grid-cols-[minmax(0,1fr)_14rem_14rem]">
                   <div aria-hidden className="min-h-[1px]" />
-                  <div className="text-center p-3 rounded-xl bg-red-50">
-                    <FileX2 className="w-8 h-8 text-red-400 mx-auto mb-2" />
-                    <p className="text-xs font-semibold text-red-600 uppercase tracking-wide">
+                  <div className="flex h-full flex-col items-center justify-center rounded-xl bg-red-50 p-3 text-center">
+                    <FileX2 className="mb-2 h-8 w-8 shrink-0 text-red-400" />
+                    <p className="text-xs font-semibold uppercase tracking-wide text-red-600">
                       Paper Trails
                     </p>
-                    <p className="text-xs text-red-400 mt-1">Vulnerable to fraud</p>
+                    <p className="mt-1 text-xs leading-snug text-red-400">
+                      Vulnerable to fraud
+                    </p>
                   </div>
-                  <div className="text-center p-3 rounded-xl bg-green/5">
-                    <FlaskConical className="w-8 h-8 text-green mx-auto mb-2" />
-                    <p className="text-xs font-semibold text-green uppercase tracking-wide">
+                  <div className="flex h-full flex-col items-center justify-center rounded-xl bg-green/5 p-3 text-center">
+                    <FlaskConical className="mb-2 h-8 w-8 shrink-0 text-green" />
+                    <p className="text-xs font-semibold uppercase tracking-wide text-green">
                       Forensic Science
                     </p>
-                    <p className="text-xs text-green/70 mt-1">Tests the product itself</p>
+                    <p className="mt-1 text-xs leading-snug text-green/70">
+                      Tests the product itself
+                    </p>
                   </div>
 
                   {[
