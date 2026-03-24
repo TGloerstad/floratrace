@@ -116,9 +116,9 @@ export default function PlatformPage() {
                 </h1>
                 <p className="text-white/70 text-lg leading-relaxed mb-8 max-w-lg">
                   The FloraTrace Portal is your command center for origin
-                  verification -- track specimens, view origin predictions,
-                  manage suppliers, and generate compliance reports from a
-                  single secure dashboard.
+                  verification -- track specimens, origin reports, manage
+                  suppliers, and generate compliance reports from a single secure
+                  dashboard.
                 </p>
                 <CTAButton>Schedule a Demo</CTAButton>
               </AnimatedSection>
