@@ -87,7 +87,7 @@ const platformBenefits = [
     icon: <Globe className="w-7 h-7" />,
     title: "Multi-Region Coverage",
     description:
-      "Verified across 14+ countries with origin fingerprints built from authenticated reference databases.",
+      "Verified across all major growing regions with origin fingerprints built from authenticated reference databases.",
   },
 ];
 
