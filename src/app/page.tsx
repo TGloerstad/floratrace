@@ -414,11 +414,10 @@ export default function HomePage() {
                 How Much Illegal Paprika Is in Your Supply Chain?
               </h2>
               <p className="text-white/70 leading-relaxed mb-6">
-                Our retail survey tested 28 paprika products across 9 U.S.
-                grocery stores. The results are striking: 100% were
-                predicted Chinese origin -- not a single one from the U.S. --
-                and 61% were flagged as originating from a region subject to
-                the Uyghur Forced Labor Prevention Act (UFLPA).
+                Our retail survey tested paprika products across 9 U.S.
+                grocery stores. The results are striking: 100% were from China
+                and 61% were from a region subject to the Uyghur Forced Labor
+                Prevention Act (UFLPA).
               </p>
               <p className="text-white/70 leading-relaxed mb-8">
                 As CPG companies race to replace artificial colors with natural
