@@ -97,7 +97,7 @@ const processSteps = [
     icon: <Fingerprint className="w-7 h-7" />,
     step: "03",
     title: "Origin Fingerprint",
-    description: "ML-driven origin prediction using proprietary algorithms and authenticated reference databases.",
+    description: "Geographic Origin determined using proprietary ML-driven algorithms and authenticated reference databases.",
   },
   {
     icon: <FileCheck className="w-7 h-7" />,
