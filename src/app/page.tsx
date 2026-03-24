@@ -290,25 +290,24 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection direction="right">
-              <div className="bg-white rounded-2xl border border-gray-medium/50 p-8 md:p-10">
-                <div className="-mx-1 overflow-x-auto px-1">
-                <div className="grid w-max grid-cols-[max-content_13rem_13rem] gap-x-4 gap-y-4 items-stretch sm:grid-cols-[max-content_14rem_14rem]">
+              <div className="bg-white rounded-2xl border border-gray-medium/50 p-6 md:p-8">
+                <div className="grid w-full min-w-0 grid-cols-[max-content_minmax(0,1fr)_minmax(0,1fr)] gap-x-2 gap-y-3 items-stretch sm:gap-x-3 sm:gap-y-4">
                   <div aria-hidden className="min-h-[1px]" />
-                  <div className="flex h-full flex-col items-center justify-center rounded-xl bg-red-50 p-3 text-center">
-                    <FileX2 className="mb-2 h-8 w-8 shrink-0 text-red-400" />
-                    <p className="text-xs font-semibold uppercase tracking-wide text-red-600">
+                  <div className="flex h-full min-w-0 flex-col items-center justify-center rounded-lg bg-red-50 px-2 py-2 text-center">
+                    <FileX2 className="mb-1 h-6 w-6 shrink-0 text-red-400" />
+                    <p className="text-[10px] font-semibold uppercase leading-tight tracking-wide text-red-600 sm:text-xs">
                       Paper Trails
                     </p>
-                    <p className="mt-1 text-xs leading-snug text-red-400">
+                    <p className="mt-0.5 text-[10px] leading-tight text-red-400 sm:text-[11px]">
                       Vulnerable to fraud
                     </p>
                   </div>
-                  <div className="flex h-full flex-col items-center justify-center rounded-xl bg-green/5 p-3 text-center">
-                    <FlaskConical className="mb-2 h-8 w-8 shrink-0 text-green" />
-                    <p className="text-xs font-semibold uppercase tracking-wide text-green">
+                  <div className="flex h-full min-w-0 flex-col items-center justify-center rounded-lg bg-green/5 px-2 py-2 text-center">
+                    <FlaskConical className="mb-1 h-6 w-6 shrink-0 text-green" />
+                    <p className="text-[10px] font-semibold uppercase leading-tight tracking-wide text-green sm:text-xs">
                       Forensic Science
                     </p>
-                    <p className="mt-1 text-xs leading-snug text-green/70">
+                    <p className="mt-0.5 text-[10px] leading-tight text-green/70 sm:text-xs">
                       Tests the product itself
                     </p>
                   </div>
@@ -325,7 +324,7 @@ export default function HomePage() {
                     return (
                       <div key={row.label} className="contents">
                         <span
-                          className={`text-sm text-navy whitespace-nowrap pb-3 pr-1 self-center ${rowDivider}`}
+                          className={`text-xs text-navy whitespace-nowrap pb-3 pr-1 self-center sm:text-sm ${rowDivider}`}
                         >
                           {row.label}
                         </span>
@@ -359,7 +358,6 @@ export default function HomePage() {
                       </div>
                     );
                   })}
-                </div>
                 </div>
               </div>
             </AnimatedSection>
