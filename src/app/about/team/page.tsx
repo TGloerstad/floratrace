@@ -38,7 +38,7 @@ const leadership = [
   },
   {
     name: "Dr. Brett Tipple",
-    title: "President & Chief Scientist",
+    title: "Co-Founder, President & Chief Scientist",
     image: "/images/team/brett-tipple.png",
     linkedin: "https://www.linkedin.com/in/bretttipple/",
     bio: "Brett is a leading isotope geochemist with a PhD from Yale and 22+ years of experience in forensic geochemistry. He has authored 80+ peer-reviewed publications and serves as Adjunct Assistant Professor at the University of Utah. His research in isotope-based origin verification is the scientific backbone of FloraTrace.",
