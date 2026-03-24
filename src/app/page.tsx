@@ -25,6 +25,7 @@ import {
   ScanSearch,
   Monitor,
   Quote,
+  Check,
 } from "lucide-react";
 import CTAButton from "@/components/CTAButton";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -290,34 +291,69 @@ export default function HomePage() {
 
             <AnimatedSection direction="right">
               <div className="bg-white rounded-2xl border border-gray-medium/50 p-8 md:p-10">
-                <div className="grid grid-cols-2 gap-6 mb-8">
-                  <div className="text-center p-4 rounded-xl bg-red-50">
+                <div className="grid grid-cols-[minmax(0,1fr)_9rem_9rem] gap-x-3 gap-y-4 items-center">
+                  <div aria-hidden className="min-h-[1px]" />
+                  <div className="text-center p-3 rounded-xl bg-red-50">
                     <FileX2 className="w-8 h-8 text-red-400 mx-auto mb-2" />
-                    <p className="text-xs font-semibold text-red-600 uppercase tracking-wide">Paper Trails</p>
+                    <p className="text-xs font-semibold text-red-600 uppercase tracking-wide">
+                      Paper Trails
+                    </p>
                     <p className="text-xs text-red-400 mt-1">Vulnerable to fraud</p>
                   </div>
-                  <div className="text-center p-4 rounded-xl bg-green/5">
+                  <div className="text-center p-3 rounded-xl bg-green/5">
                     <FlaskConical className="w-8 h-8 text-green mx-auto mb-2" />
-                    <p className="text-xs font-semibold text-green uppercase tracking-wide">Forensic Science</p>
+                    <p className="text-xs font-semibold text-green uppercase tracking-wide">
+                      Forensic Science
+                    </p>
                     <p className="text-xs text-green/70 mt-1">Tests the product itself</p>
                   </div>
-                </div>
-                <div className="space-y-3">
+
                   {[
-                    { label: "Tamper-resistant", paper: false, science: true },
-                    { label: "Court-admissible", paper: false, science: true },
-                    { label: "Detects blending", paper: false, science: true },
-                    { label: "Independent of supplier claims", paper: false, science: true },
-                    { label: "Verifies raw material origin", paper: false, science: true },
-                  ].map((row) => (
-                    <div key={row.label} className="flex items-center justify-between py-2 border-b border-gray-100 last:border-0">
-                      <span className="text-sm text-navy">{row.label}</span>
-                      <div className="flex gap-10">
-                        <span className="text-red-400 text-lg">&#x2717;</span>
-                        <span className="text-green text-lg">&#x2713;</span>
+                    { label: "Tamper-resistant", paperNegative: true },
+                    { label: "Court-admissible", paperNegative: false },
+                    { label: "Detects blending", paperNegative: true },
+                    { label: "Independent of supplier claims", paperNegative: true },
+                    { label: "Verifies raw material origin", paperNegative: true },
+                  ].map((row, i, arr) => {
+                    const rowDivider =
+                      i < arr.length - 1 ? "border-b border-gray-100" : "";
+                    return (
+                      <div key={row.label} className="contents">
+                        <span
+                          className={`text-sm text-navy pb-3 self-center ${rowDivider}`}
+                        >
+                          {row.label}
+                        </span>
+                        <div
+                          className={`flex justify-center pb-3 ${rowDivider}`}
+                        >
+                          {row.paperNegative ? (
+                            <span
+                              className="text-red-400 text-lg leading-none"
+                              aria-hidden
+                            >
+                              &#x2717;
+                            </span>
+                          ) : (
+                            <Check
+                              className="w-5 h-5 text-red-500 shrink-0"
+                              strokeWidth={2.5}
+                              aria-hidden
+                            />
+                          )}
+                        </div>
+                        <div
+                          className={`flex justify-center pb-3 ${rowDivider}`}
+                        >
+                          <Check
+                            className="w-5 h-5 text-green shrink-0"
+                            strokeWidth={2.5}
+                            aria-hidden
+                          />
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </AnimatedSection>
