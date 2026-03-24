@@ -151,7 +151,7 @@ export default function HomePage() {
                 transition={{ duration: 0.7 }}
                 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-navy leading-[1.1]"
               >
-                Know the true origin of your supply chain —{" "}
+                Know the true origin of your supply chain{" "}
                 <span className="text-green">before regulators ask</span>
               </motion.h1>
               <motion.p
