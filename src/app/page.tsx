@@ -160,10 +160,11 @@ export default function HomePage() {
                 transition={{ duration: 0.7, delay: 0.2 }}
                 className="mt-6 text-lg text-gray-dark leading-relaxed max-w-xl"
               >
-                Verify geographic origin with science, not paperwork.
-                For companies seeking to comply with UFLPA, anti-dumping,
-                countervailing, free trade agreement requirements,
-                deforestation and The Lacey Act.
+                Our services include geographic origin verification for
+                companies, both large and small, seeking to comply regulations,
+                including UFLPA, anti-dumping, countervailing, free trade
+                agreement requirements, deforestation, the Lanham, and Lacey
+                Acts.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
