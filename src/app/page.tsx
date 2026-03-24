@@ -291,7 +291,8 @@ export default function HomePage() {
 
             <AnimatedSection direction="right">
               <div className="bg-white rounded-2xl border border-gray-medium/50 p-8 md:p-10">
-                <div className="grid grid-cols-[minmax(0,1fr)_13rem_13rem] gap-x-3 gap-y-4 items-stretch sm:grid-cols-[minmax(0,1fr)_14rem_14rem]">
+                <div className="-mx-1 overflow-x-auto px-1">
+                <div className="grid w-max grid-cols-[max-content_13rem_13rem] gap-x-4 gap-y-4 items-stretch sm:grid-cols-[max-content_14rem_14rem]">
                   <div aria-hidden className="min-h-[1px]" />
                   <div className="flex h-full flex-col items-center justify-center rounded-xl bg-red-50 p-3 text-center">
                     <FileX2 className="mb-2 h-8 w-8 shrink-0 text-red-400" />
@@ -324,7 +325,7 @@ export default function HomePage() {
                     return (
                       <div key={row.label} className="contents">
                         <span
-                          className={`text-sm text-navy pb-3 self-center ${rowDivider}`}
+                          className={`text-sm text-navy whitespace-nowrap pb-3 pr-1 self-center ${rowDivider}`}
                         >
                           {row.label}
                         </span>
@@ -358,6 +359,7 @@ export default function HomePage() {
                       </div>
                     );
                   })}
+                </div>
                 </div>
               </div>
             </AnimatedSection>
