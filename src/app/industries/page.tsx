@@ -162,7 +162,7 @@ export default function IndustriesPage() {
                   How Much Illegal Paprika Is in Your Supply Chain?
                 </h3>
                 <p className="text-white/60 text-sm mb-8">
-                  Origin verification of 28 retail paprika products across 9
+                  Origin verification of retail paprika products across 9
                   U.S. grocery stores
                 </p>
 
