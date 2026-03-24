@@ -26,7 +26,7 @@ const leadership = [
   },
   {
     name: "Kimberley Gunther",
-    title: "Chief Revenue Officer & Insurance Strategist",
+    title: "Insurance Strategist",
     image: "/images/team/kimberley-gunther.png",
     linkedin: "https://www.linkedin.com/in/kimberleygunther/",
     bio: "Kim brings 30+ years of insurance industry expertise spanning enterprise sales, digital transformation, and insurtech innovation. She held senior roles at IBM, Cognizant, and Majesco, and created Rezylient, an Insurtech MGA providing Trade Disruption Insurance with Lloyd's syndicate Tokio Marine Kiln.",
