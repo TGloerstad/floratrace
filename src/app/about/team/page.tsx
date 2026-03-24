@@ -26,14 +26,14 @@ const leadership = [
   },
   {
     name: "Kimberley Gunther",
-    title: "Co-Founder & Chief Strategist",
+    title: "Chief Revenue Officer & Insurance Strategist",
     image: "/images/team/kimberley-gunther.png",
     linkedin: "https://www.linkedin.com/in/kimberleygunther/",
-    bio: "Kim co-founded FloraTrace and leads the company's strategic partnerships and customer solutions. She architected the KYG Trade integration that links origin verification to digital supply chain traceability, creating immutable audit records for regulatory compliance.",
+    bio: "Kim brings 30+ years of insurance industry expertise spanning enterprise sales, digital transformation, and insurtech innovation. She held senior roles at IBM, Cognizant, and Majesco, and created Rezylient, an Insurtech MGA providing Trade Disruption Insurance with Lloyd's syndicate Tokio Marine Kiln.",
     credentials: [
-      "Co-Founded FloraTrace, shaping go-to-market and customer strategy",
-      "Architected the KYG Trade partnership linking forensic verification to digital traceability",
-      "Supply chain compliance strategy and partner ecosystem development",
+      "30+ years in insurance — IBM, Cognizant, Majesco, and insurtech ventures",
+      "Created Rezylient Insurtech MGA with Lloyd's syndicate Tokio Marine Kiln",
+      "Licensed P&C Insurance Broker; BA, Bethel University",
     ],
   },
   {
