@@ -4,7 +4,6 @@ import {
   ShieldCheck,
   AlertTriangle,
   FileCheck,
-  Scale,
   ArrowRight,
   ClipboardList,
   Building2,

@@ -324,7 +324,7 @@ export default function PlatformPage() {
                     Authorization: Bearer ft_key_...
                   </p>
                   <p className="text-orange-light mt-3">
-                    {`{`} "total": 130, "verified": 100 {`}`}
+                    {`{ "total": 130, "verified": 100 }`}
                   </p>
                 </div>
               </div>

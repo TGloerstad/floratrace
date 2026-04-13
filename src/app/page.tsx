@@ -12,8 +12,6 @@ import {
   Wheat,
   Droplets,
   Building2,
-  MapPin,
-  Award,
   Calendar,
   Palette,
   ArrowRight,

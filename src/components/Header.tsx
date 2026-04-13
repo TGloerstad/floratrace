@@ -31,31 +31,12 @@ const navItems = [
   { label: "Contact", href: "/contact" },
 ];
 
-export default function Header() {
+function HeaderNav({ pathname }: { pathname: string }) {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const pathname = usePathname();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    setMobileOpen(false);
-    setOpenDropdown(null);
-  }, [pathname]);
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-md"
-          : "bg-white"
-      }`}
-    >
+    <>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Logo />
@@ -209,6 +190,29 @@ export default function Header() {
           </nav>
         </div>
       )}
+    </>
+  );
+}
+
+export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-md"
+          : "bg-white"
+      }`}
+    >
+      <HeaderNav key={pathname} pathname={pathname} />
     </header>
   );
 }

@@ -10,7 +10,6 @@ import {
   AlertTriangle,
   ShieldCheck,
   FlaskConical,
-  ArrowRight,
 } from "lucide-react";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import AnimatedSection from "@/components/AnimatedSection";

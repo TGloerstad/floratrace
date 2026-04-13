@@ -10,7 +10,6 @@ import {
   Pill,
   Gem,
   Sun,
-  Leaf,
   CircuitBoard,
   Beaker,
   Fingerprint,
