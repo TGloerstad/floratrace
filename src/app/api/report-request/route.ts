@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 import { getReportAccessToken } from "@/lib/report-access";
 
 const REPORT_URL_BASE = process.env.REPORT_BASE_URL ?? "https://floratrace.com";
-const NOTIFY_TO = process.env.GMAIL_USER ?? "info@floratrace.com";
+const NOTIFY_TO = process.env.GMAIL_USER ?? "tgl@floratrace.com";
 
 function buildTransporter() {
   const user = process.env.GMAIL_USER;
@@ -86,7 +86,12 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ ok: true });
   } catch (err) {
-    console.error("report-request error:", err);
+    const message =
+      err instanceof Error ? err.message : String(err);
+    console.error("[report-request] SMTP failure:", message);
+    if (err instanceof Error && err.stack) {
+      console.error("[report-request] stack:", err.stack);
+    }
     return NextResponse.json(
       { error: "Unable to send email. Please try again." },
       { status: 500 },

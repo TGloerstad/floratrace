@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import { FileDown } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import CTAButton from "@/components/CTAButton";
 import { getReportAccessToken } from "@/lib/report-access";
-import ReportRequestForm from "./ReportRequestForm";
+
+const REPORT_PDF_PATH = "/reports/marketing-report.pdf";
 
 export async function generateStaticParams() {
   return [{ token: getReportAccessToken() }];
@@ -37,17 +41,51 @@ export default async function ReportLandingPage({ params }: Props) {
               Paprika retail survey report
             </h1>
             <p className="mt-6 text-white/70 text-lg leading-relaxed">
-              Enter your details below and we will send the full report
-              directly to your inbox.
+              Thank you for your interest. View the report below or download a
+              copy for your records.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
       <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-lg mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <ReportRequestForm />
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+              <CTAButton
+                href={REPORT_PDF_PATH}
+                download="FloraTrace_Paprika_Retail_Survey_Report.pdf"
+              >
+                <span className="inline-flex items-center gap-2">
+                  <FileDown className="w-5 h-5" aria-hidden />
+                  Download PDF
+                </span>
+              </CTAButton>
+              <CTAButton href="/contact" variant="outline">
+                Contact us
+              </CTAButton>
+            </div>
+            <div className="rounded-2xl border border-gray-medium/50 overflow-hidden shadow-lg bg-gray-50 aspect-[8.5/11] max-h-[80vh]">
+              <iframe
+                title="FloraTrace paprika retail survey report"
+                src={REPORT_PDF_PATH}
+                className="w-full h-full min-h-[70vh] border-0"
+              />
+            </div>
+            <p className="mt-6 text-center text-sm text-gray-dark">
+              Prefer email? Reach us at{" "}
+              <a
+                href="mailto:info@floratrace.com"
+                className="text-green hover:underline"
+              >
+                info@floratrace.com
+              </a>
+              . Return to the{" "}
+              <Link href="/" className="text-green hover:underline">
+                home page
+              </Link>
+              .
+            </p>
           </AnimatedSection>
         </div>
       </section>

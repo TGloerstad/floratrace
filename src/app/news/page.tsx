@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { FileText, ArrowRight } from "lucide-react";
 import NewsCard from "@/components/NewsCard";
 import AnimatedSection from "@/components/AnimatedSection";
 
@@ -82,6 +84,39 @@ export default function NewsPage() {
               The latest from FloraTrace -- industry events, partnerships, and
               insights.
             </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Featured Report */}
+      <section className="py-16 md:py-20 bg-gradient-to-r from-green/5 via-white to-green/5">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="bg-white rounded-2xl border border-gray-medium/50 shadow-lg overflow-hidden md:flex">
+              <div className="md:w-20 bg-gradient-to-b from-navy to-navy-light flex items-center justify-center py-8 md:py-0">
+                <FileText className="w-10 h-10 text-green-light" />
+              </div>
+              <div className="flex-1 p-8 md:p-10">
+                <p className="text-green font-semibold uppercase tracking-widest text-xs mb-2">
+                  Featured Report
+                </p>
+                <h2 className="text-xl md:text-2xl font-display font-bold text-navy mb-3">
+                  Paprika Retail Survey Report
+                </h2>
+                <p className="text-gray-dark leading-relaxed mb-6">
+                  Our latest research examines paprika products across US retail
+                  channels, revealing key insights about origin labeling and
+                  supply chain transparency. Request your free copy today.
+                </p>
+                <Link
+                  href="/report-access"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-md font-semibold text-base bg-green text-white hover:bg-green-dark shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                >
+                  Access Report
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
           </AnimatedSection>
         </div>
       </section>
